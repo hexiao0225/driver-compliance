@@ -1,0 +1,20 @@
+enum ComplianceStatus {
+    VALID
+    EXPIRING
+    EXPIRED
+}
+
+type Driver {
+    id: ID!
+    name: String!
+    email: String
+    status: ComplianceStatus!
+}
+
+type Query {
+    drivers: [Driver!]!
+}
+
+type Mutation {
+    addDriver(name: String!, email: String): Driver!
+}

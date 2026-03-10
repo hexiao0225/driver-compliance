@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/compliance}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+dgs:
+  graphql:
+    graphiql:
+      enabled: true
