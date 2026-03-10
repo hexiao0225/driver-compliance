@@ -91,8 +91,6 @@ docker rm -f compliance-db
 
 ## Live URLs
 
-Fill in after deployment:
-
-- **Frontend**: https://_____.vercel.app
-- **Backend GraphQL**: https://_____.onrender.com/graphql
-- **GraphiQL playground**: https://_____.onrender.com/graphiql
+- **Frontend**: https://frontend-smoky-nine-12.vercel.app
+- **Backend GraphQL**: https://driver-compliance.onrender.com/graphql
+- **GraphiQL playground**: https://driver-compliance.onrender.com/graphiql
