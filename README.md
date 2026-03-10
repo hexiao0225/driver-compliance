@@ -74,10 +74,10 @@ flowchart TD
    ```
    Open [http://localhost:5173](http://localhost:5173) — the Vite proxy forwards `/graphql` to `localhost:8080`, so no CORS config needed locally.
 
-### Stopping the database
-```bash
-docker rm -f compliance-db
-```
+### Stopping
+
+- **Frontend / Backend**: press `Ctrl+C` in the terminal running `npm run dev` / `./gradlew bootRun`
+- **Database**: `docker rm -f compliance-db`
 
 ---
 
