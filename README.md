@@ -26,6 +26,40 @@ flowchart TD
 
 ---
 
+## Quick Start (returning dev cheat sheet)
+
+> Assumes JDK 21, Gradle, Node 20+, and Docker Desktop are already installed.
+
+Open **three terminals**:
+
+**Terminal 1 — Database**
+```bash
+docker start compliance-db
+# First time only: docker run -d --name compliance-db -e POSTGRES_DB=compliance -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5433:5432 postgres:16-alpine
+```
+
+**Terminal 2 — Backend**
+```bash
+cd backend
+SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5433/compliance ./gradlew bootRun
+```
+GraphiQL available at http://localhost:8080/graphiql
+
+**Terminal 3 — Frontend**
+```bash
+cd frontend
+npm run dev
+```
+App available at http://localhost:5173
+
+**Stop everything**
+```bash
+# Ctrl+C in Terminal 2 and Terminal 3
+docker stop compliance-db
+```
+
+---
+
 ## Local Development
 
 ### Prerequisites
