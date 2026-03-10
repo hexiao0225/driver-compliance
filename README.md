@@ -7,19 +7,19 @@ A full-stack Driver Compliance MVP — React + GraphQL + Kotlin/Spring Boot + Po
 ```mermaid
 flowchart TD
     subgraph Vercel
-        FE["Frontend\nReact + Apollo Client\nVite + TypeScript + Tailwind"]
+        FE["Frontend<br/>React + Apollo Client<br/>Vite + TypeScript + Tailwind"]
     end
 
     subgraph Render
-        BE["Backend\nKotlin + Spring Boot 3\nNetflix DGS GraphQL"]
+        BE["Backend<br/>Kotlin + Spring Boot 3<br/>Netflix DGS GraphQL"]
     end
 
     subgraph Neon
-        DB[("Database\nPostgreSQL 16\nFlyway migrations")]
+        DB[("Database<br/>PostgreSQL 16<br/>Flyway migrations")]
     end
 
-    FE -- "GraphQL over HTTPS\nVITE_API_URL → /graphql" --> BE
-    BE -- "JDBC / HikariCP\nSPRING_DATASOURCE_URL" --> DB
+    FE -- "GraphQL over HTTPS" --> BE
+    BE -- "JDBC / HikariCP" --> DB
 ```
 
 **Local dev:** the Vite dev proxy forwards `/graphql` → `localhost:8080`, so no CORS config is needed during development.
